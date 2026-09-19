@@ -1,302 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F8R — Privacy Policy</title>
-<meta name="robots" content="index, follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F8r - Privacy Policy</title>
 <style>
-  :root {
-    --bg: #ffffff;
-    --text: #1a1c1e;
-    --muted: #5b6168;
-    --border: #e4e6e9;
-    --accent: #3a5bdc;
-    --card-bg: #f6f7f9;
-    --code-bg: #f0f1f3;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14161a;
-      --text: #eceef1;
-      --muted: #a2a8b0;
-      --border: #2a2d33;
-      --accent: #7c93f2;
-      --card-bg: #1c1f24;
-      --code-bg: #20242a;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.65;
-  }
-  .wrap {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-  }
-  header.page-header {
-    margin-bottom: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border);
-  }
-  h1 {
-    font-size: 1.9rem;
-    margin: 0 0 8px;
-  }
-  .meta {
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-    margin-top: 2.2em;
-    margin-bottom: 0.6em;
-    padding-top: 0.2em;
-  }
-  h3 {
-    font-size: 1.05rem;
-    margin-top: 1.6em;
-    margin-bottom: 0.4em;
-  }
-  p, li { color: var(--text); }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  ul, ol { padding-left: 1.3em; }
-  li { margin-bottom: 0.4em; }
-  .toc {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 22px;
-    margin: 28px 0 8px;
-  }
-  .toc p { margin: 0 0 10px; font-weight: 600; font-size: 0.95rem; }
-  .toc ol { margin: 0; padding-left: 1.2em; columns: 2; column-gap: 24px; }
-  .toc li { font-size: 0.92rem; margin-bottom: 6px; break-inside: avoid; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    font-size: 0.94rem;
-  }
-  th, td {
-    text-align: left;
-    padding: 10px 12px;
-    border: 1px solid var(--border);
-    vertical-align: top;
-  }
-  th { background: var(--card-bg); }
-  code {
-    background: var(--code-bg);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  .callout {
-    background: var(--card-bg);
-    border-left: 3px solid var(--accent);
-    border-radius: 6px;
-    padding: 14px 18px;
-    margin: 1.2em 0;
-    font-size: 0.95rem;
-  }
-  footer {
-    margin-top: 3em;
-    padding-top: 1.5em;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.88rem;
-  }
-  .back-to-top {
-    display: inline-block;
-    margin-top: 8px;
-    font-size: 0.85rem;
-  }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c1c1c; background: #fafafa; margin: 0; padding: 24px 16px; line-height: 1.55; }
+  main { max-width: 760px; margin: 0 auto; background: #fff; padding: 32px 28px; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 32px 0 8px; border-bottom: 1px solid #e6e6e6; padding-bottom: 4px; }
+  h3 { font-size: 1.05rem; margin: 20px 0 6px; }
+  .meta { color: #666; font-size: .9rem; margin-bottom: 20px; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 10px 0 16px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border: 1px solid #e0e0e0; }
+  th { background: #f3f3f3; }
+  nav ol { columns: 2; column-gap: 24px; padding-left: 20px; }
+  nav li { break-inside: avoid; }
+  .note { background: #fff8e1; border-left: 4px solid #f2b400; padding: 10px 14px; margin: 14px 0; }
+  code { background: #f3f3f3; padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+  footer { margin-top: 32px; font-size: .85rem; color: #666; }
 </style>
 </head>
 <body>
-<div class="wrap">
+<main>
+<h1>Privacy Policy</h1>
+<p class="meta">F8r &middot; September 19, 2026 &middot; Last updated: September 19, 2026</p>
 
-  <header class="page-header" id="top">
-    <h1>Privacy Policy</h1>
-    <p class="meta">F8R · September 18, 2026 · Last Updated: September 18, 2026</p>
-  </header>
+<p>This Privacy Policy explains what F8r (&ldquo;F8r&rdquo;, &ldquo;the game&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;)
+does with your data. F8r is an auto battler for Android in which you build a team of martial artists and
+watch it fight. The game is offered by the controller named under <a href="#controller">Controller</a>.</p>
 
-  <p>This Privacy Policy explains how <strong>F8R</strong> ("F8R," "the App," "we," "us," or "our"), developed by
-  <strong>Wavori</strong> (Walid), collects, uses, shares, and protects information when you use the App. It applies
-  to the F8R mobile application and any related services we offer.</p>
+<p>The short version: when you first open F8r we ask you to confirm that you are 13 or older; after that
+the game creates a guest account for you on our server, which is how your run is saved. You can turn that
+guest into an account with an email address and password, and you can delete the guest or the account,
+with everything stored under it, from inside the game. We show no ads, run no analytics and use no crash
+reporting. We do not sell data.</p>
 
-  <p>By using F8R, you agree to the collection and use of information as described in this policy. If you do not
-  agree with this policy, please do not use the App.</p>
+<nav>
+<ol>
+  <li><a href="#controller">Controller</a></li>
+  <li><a href="#age">Age requirement</a></li>
+  <li><a href="#data">What data we process, and why</a></li>
+  <li><a href="#device">Data that stays on your device</a></li>
+  <li><a href="#processor">Where the data is stored (Appwrite Cloud)</a></li>
+  <li><a href="#sharing">Sharing</a></li>
+  <li><a href="#retention">How long we keep data</a></li>
+  <li><a href="#deletion">Deleting your account and data</a></li>
+  <li><a href="#security">Security</a></li>
+  <li><a href="#rights">Your rights</a></li>
+  <li><a href="#children">Children</a></li>
+  <li><a href="#changes">Changes to this policy</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ol>
+</nav>
 
-  <nav class="toc">
-    <p>Contents</p>
-    <ol>
-      <li><a href="#age">Age Requirement</a></li>
-      <li><a href="#info-we-collect">Information We Collect</a></li>
-      <li><a href="#how-we-use">How We Use Your Information</a></li>
-      <li><a href="#how-we-share">How We Share Your Information</a></li>
-      <li><a href="#third-parties">Third-Party Services</a></li>
-      <li><a href="#retention">Data Retention</a></li>
-      <li><a href="#security">Data Security</a></li>
-      <li><a href="#rights">Your Rights and Choices</a></li>
-      <li><a href="#deletion">Account and Data Deletion</a></li>
-      <li><a href="#children">Children's Privacy</a></li>
-      <li><a href="#international">International Users</a></li>
-      <li><a href="#changes">Changes to This Policy</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ol>
-  </nav>
+<h2 id="controller">1. Controller</h2>
+<p>The controller within the meaning of the General Data Protection Regulation (GDPR) is:</p>
+<p>
+  Wavori (Walid)<br>
+  tbd<br>
+  Email: <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>
+</p>
+<p>We have not appointed a data protection officer, because we are not required to. Questions about this
+policy and requests concerning your data go to the address above.</p>
 
-  <h2 id="age">1. Age Requirement</h2>
-  <p>F8R is intended for use by people aged 13 and older. By creating an account or using the App, you represent
-  that you are at least 13 years old. We do not currently ask users for their age or date of birth, and we do not
-  knowingly collect personal information from children under 13. See <a href="#children">Children's Privacy</a>
-  below for more detail.</p>
+<h2 id="age">2. Age requirement</h2>
+<p>F8r is for players aged 13 and older. The first time you open the game, before anything is sent
+to our server, we ask you to confirm that you are at least 13. Only your confirmation is stored, and
+only on your device; we do not store your age and we do not verify what you tell us. Without the
+confirmation the game does not continue and no account is created.</p>
 
-  <h2 id="info-we-collect">2. Information We Collect</h2>
+<h2 id="data">3. What data we process, and why</h2>
 
-  <h3>Account Information</h3>
-  <p>When you create an F8R account, we collect the email address, username, and password you provide. Your
-  password is stored in encrypted (hashed) form — we cannot see or recover your actual password.</p>
+<h3>3.1 Your guest account</h3>
+<p>F8r has no offline save. To keep your run, the game creates an anonymous user (a &ldquo;guest&rdquo;)
+on our server the first time it starts after the age confirmation, and signs that guest in on every
+later start. A guest has no name and no email address. What exists about a guest is:</p>
+<ul>
+  <li>a random user ID, the time it was created and the time it was last used;</li>
+  <li>a session, which our backend provider records with the IP address the session was opened from,
+      the name and version of your operating system, the brand and model of your device, the name and
+      version of the app, and the country derived from the IP address (see
+      <a href="#processor">Appwrite Cloud</a> for the source of this list).</li>
+</ul>
+<p><strong>Purpose and legal basis:</strong> providing the game and saving your run
+(Art. 6(1)(b) GDPR, performance of a contract); the session data serves the security of the account
+and of our service (Art. 6(1)(f) GDPR, our legitimate interest in preventing abuse).</p>
 
-  <h3>Gameplay and Usage Data</h3>
-  <p>To run matchmaking, leaderboards, and your in-game progress, we collect data generated as you play, such as
-  match results, win/loss record, leaderboard rank, in-game progress, and general app usage (features used,
-  session activity).</p>
+<h3>3.2 Your registered account</h3>
+<p>If you choose <em>Create account</em> on the account screen, your guest becomes an account with the
+email address and password you enter. The user ID stays the same, so everything stored under the guest
+becomes the account's. The password is stored only as a salted hash (Argon2); we cannot read it.
+Our provider additionally derives from the address whether it belongs to a free, disposable or
+corporate email service and whether the password appears in known breaches; we do not use these flags.</p>
+<p>We use the email address only to sign you in and to answer a request you send us from it. We send
+no newsletters and no notifications. Email verification and password recovery are not offered at the
+moment; if you lose the password, you can only delete the account and start over.</p>
+<p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of a contract).</p>
 
-  <h3>Advertising Identifiers</h3>
-  <p>F8R shows ads through Google AdMob. AdMob may access device and advertising identifiers (such as your
-  Android Advertising ID) to serve and measure ads. See <a href="#third-parties">Third-Party Services</a> for
-  details.</p>
+<h3>3.3 Game data</h3>
+<p>Everything you do in the game is stored under your user ID on our server, because the server, not
+the phone, decides the outcome of every fight. This is:</p>
+<table>
+<tr><th>Data</th><th>What it contains</th></tr>
+<tr><td>Your run</td><td>Round, gold, hearts, trophies, the team, the shop shelf, the chosen sets and
+backdrop, internal seeds and version counters, and when it was last updated.</td></tr>
+<tr><td>Your last fights</td><td>Both teams as they entered the fight, the opponent (a generated
+team, never another player's data), the seed, the outcome, hearts lost, trophies gained, and the time.
+Only the 20 newest fights are kept.</td></tr>
+<tr><td>Divergence reports</td><td>If the game on your phone and the server disagree about the result
+of your shop actions, the app sends the actions and both results to us so we can find the bug. The
+report holds the run ID, version counters, the actions, and the fields that differ. It contains no text
+you wrote and nothing about your device.</td></tr>
+</table>
+<p>There are no leaderboards, no matchmaking against other players, no chat and no usernames. Nothing
+of yours is shown to other players.</p>
+<p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR for the run and the fights; Art. 6(1)(f) GDPR for
+the divergence reports (our legitimate interest in a game that plays the same on the phone and on the
+server).</p>
 
-  <h3>Diagnostic and Crash Data</h3>
-  <p>We use a crash reporting and performance monitoring tool (such as Firebase Crashlytics or Sentry) to find
-  and fix bugs. This may automatically collect technical data such as device model, operating system version,
-  app version, IP address, and crash/error logs.</p>
+<h3>3.4 Technical logs of our backend</h3>
+<p>Every request the game makes to our server function is recorded by our provider as an execution
+log: the method and path of the request, the time, the duration, the result status and some request
+headers. Request and response bodies are not logged. Our provider also keeps an audit log of account
+events (creation, sign-in, deletion) with the user, the event, the IP address, the location derived
+from it and the time. We read these logs only to find and fix errors and to investigate abuse.</p>
+<p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (our legitimate interest in a service that works and
+is not abused).</p>
 
-  <h3>Purchases</h3>
-  <p>F8R does not currently offer in-app purchases, and we do not collect any payment or purchase data. If we
-  introduce in-app purchases in the future, we will update this Privacy Policy and our Play Console Data safety
-  information before doing so.</p>
+<h3>3.5 What we do not collect</h3>
+<p>F8r shows no advertising, contains no analytics or tracking SDK, sends no crash reports, uses no
+push notifications, and asks for no permissions beyond network access. We do not collect your
+location, contacts, photos, camera, microphone, health or payment data. There are no in-app purchases.
+Should any of this change, this policy and the Data safety section on Google Play will be updated
+before the change ships.</p>
 
-  <div class="callout">
-    We do not collect your precise location, contacts, photos, camera, or microphone data, and we do not collect
-    health or financial information.
-  </div>
+<h3>3.6 Google Play</h3>
+<p>You install F8r through Google Play. What Google collects when you do so (for example your Google
+account, device information and installation statistics) is governed by
+<a href="https://policies.google.com/privacy">Google's Privacy Policy</a>; we receive only aggregate,
+anonymous statistics from the Play Console.</p>
 
-  <h2 id="how-we-use">3. How We Use Your Information</h2>
-  <ul>
-    <li>To create and manage your account, and let you sign in across sessions</li>
-    <li>To operate core gameplay features: matchmaking, battles, leaderboards, and progress saving</li>
-    <li>To display ads and measure ad performance</li>
-    <li>To diagnose crashes, fix bugs, and improve app performance and stability</li>
-    <li>To detect, investigate, and prevent fraud, cheating, or abuse</li>
-    <li>To communicate with you about your account or respond to support requests</li>
-    <li>To comply with legal obligations</li>
-  </ul>
-  <p>We do not use your data for purposes beyond what's needed to run and improve F8R and to communicate with
-  you, and we do not sell your personal data.</p>
+<h2 id="device">4. Data that stays on your device</h2>
+<p>The app keeps the following on your phone only, in its private storage, and never sends it to us:
+your settings (volume, haptics, language, reduced motion), your age confirmation, a copy of your
+current run and your last fights so the game can show them while the server is unreachable, and the
+session token that signs your guest or account in. Uninstalling the app removes all of it. Uninstalling
+does <em>not</em> delete your account on the server; see <a href="#deletion">Deleting your account</a>.</p>
 
-  <h2 id="how-we-share">4. How We Share Your Information</h2>
-  <p>We share information only in the following circumstances:</p>
-  <ul>
-    <li><strong>Service providers:</strong> With third parties that help us operate F8R, such as our advertising
-    provider (Google AdMob), crash/diagnostics provider, and cloud hosting/backend infrastructure providers — only
-    to the extent needed for them to perform their function.</li>
-    <li><strong>Other players:</strong> Your username and gameplay/leaderboard data (such as rank or win record)
-    may be visible to other players as part of normal gameplay.</li>
-    <li><strong>Legal reasons:</strong> If required to comply with a valid legal request, protect our rights, or
-    prevent fraud or harm.</li>
-    <li><strong>Business transfers:</strong> If F8R is involved in a merger, acquisition, or sale of assets, with
-    notice to you as required by law.</li>
-  </ul>
-  <p>We do not sell your personal data to third parties.</p>
+<h2 id="processor">5. Where the data is stored (Appwrite Cloud)</h2>
+<p>Our backend runs on <strong>Appwrite Cloud</strong>, a service of Appwrite Code Ltd. (<a href="https://appwrite.io/privacy">privacy policy</a>).
+Appwrite processes your data on our behalf as a processor under a data processing agreement
+(Art. 28 GDPR). We use the <strong>Frankfurt (FRA) region</strong>: all data at rest, including
+database rows, sessions, logs and backups, stays in Germany; Appwrite states that regions are
+isolated and data remains within the selected region. Appwrite's own sub-processors are listed in its data processing agreement.</p>
 
-  <h2 id="third-parties">5. Third-Party Services</h2>
-  <table>
-    <tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
-    <tr>
-      <td>Google AdMob</td>
-      <td>Displaying and measuring in-app ads</td>
-      <td>Advertising/device identifiers, usage data — see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a></td>
-    </tr>
-    <tr>
-      <td>Crash reporting (Firebase Crashlytics or Sentry)</td>
-      <td>Detecting and diagnosing crashes and errors</td>
-      <td>Device info, app version, IP address, crash logs</td>
-    </tr>
-    <tr>
-      <td>Backend / cloud hosting</td>
-      <td>Storing account and gameplay data securely</td>
-      <td>Account data, gameplay data</td>
-    </tr>
-  </table>
-  <p>Each third-party service processes data under its own privacy policy in addition to this one. We only work
-  with providers that are contractually required to protect your data and use it solely to provide their
-  service to us.</p>
 
-  <h2 id="retention">6. Data Retention</h2>
-  <p>We keep your account and gameplay data for as long as your account is active, so we can provide the App's
-  features. If you delete your account, we delete your associated personal data immediately. Limited data may
-  remain briefly in encrypted backup systems until those backups naturally cycle out, and we may retain minimal
-  information where required for security, fraud prevention, or legal compliance.</p>
+<h2 id="sharing">6. Sharing</h2>
+<p>We share your data with nobody except Appwrite as described above. We disclose data to authorities
+only when a valid legal request obliges us to (Art. 6(1)(c) GDPR). We do not sell personal data and we
+do not use it for advertising. If F8r were ever transferred to another operator, you would be informed
+beforehand.</p>
 
-  <h2 id="security">7. Data Security</h2>
-  <p>We take reasonable technical and organizational measures to protect your information, including encrypting
-  data in transit using HTTPS/TLS and storing passwords in hashed form. No method of transmission or storage is
-  100% secure, but we work to protect your data using industry-standard practices.</p>
+<h2 id="retention">7. How long we keep data</h2>
+<table>
+<tr><th>Data</th><th>Kept until</th></tr>
+<tr><td>Guest account, registered account, your run</td><td>You delete it in the game (or ask us to).
+A guest whose session has expired, that is a guest who has not opened the game for a year, is removed
+with everything stored under it during our regular clean-up.</td></tr>
+<tr><td>Your last fights</td><td>The 20 newest are kept; older ones are deleted by an hourly clean-up,
+and all of them go when the account is deleted.</td></tr>
+<tr><td>Divergence reports</td><td>Deleted when the account is deleted; independently of that, only the
+500 newest reports across all players are kept.</td></tr>
+<tr><td>Sessions</td><td>A session expires one year after it was last extended, which happens on every
+start of the game. Deleting the account ends all sessions at once.</td></tr>
+<tr><td>Execution and audit logs at Appwrite</td><td>No longer than 7 days (24 hours or less on
+Appwrite's Free plan).</td></tr>
+<tr><td>Backups at Appwrite</td><td>Daily database backups, where enabled, are kept for 7 days, so a
+deleted row can survive in a backup for up to 7 days. Backups are not used to restore individual
+accounts.</td></tr>
+<tr><td>Emails you send us</td><td>As long as needed to handle your request, then deleted.</td></tr>
+</table>
 
-  <h2 id="rights">8. Your Rights and Choices</h2>
-  <p>Depending on where you live, you may have rights to access, correct, delete, or receive a copy of your
-  personal data, to object to or restrict certain processing, and, in some regions, to opt out of certain data
-  practices. To exercise any of these rights, contact us at
-  <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>.</p>
-  <p>We do not sell personal data, so there is nothing to opt out of in that respect. You can also control ad
-  personalization at the device level through your Android device's Ads settings.</p>
+<h2 id="deletion">8. Deleting your account and data</h2>
+<p>You can delete your guest or your registered account, and with it everything stored under it on
+our server, from inside the game: open the menu, choose <em>Account</em>, then <em>Delete my data</em>
+(as a guest) or <em>Delete account</em> (with an account), and confirm with <em>Delete</em>. The server
+then deletes your run, your fights and your divergence reports, and finally the account itself with its
+email address, password hash and sessions. This happens at once and cannot be undone. The game then
+continues with a fresh, empty guest on your device.</p>
+<p>If you have a registered account and no longer have the app, email us from the address of the
+account at <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a> with the subject
+&ldquo;Delete my F8r account&rdquo;; we delete it within 30 days and confirm by email. A guest can
+only be deleted from the game, because nothing except the app on your device identifies a guest to us;
+a guest that has not been used for a year is removed by our clean-up.</p>
+<p>Step-by-step instructions, and what is kept for how long afterwards, are on our
+<a href="delete-account.html">account deletion page</a>.</p>
 
-  <h2 id="deletion">9. Account and Data Deletion</h2>
-  <p>You can request deletion of your F8R account and associated data at any time, in either of these ways:</p>
-  <ul>
-    <li><strong>In the App:</strong> Go to your account or settings screen and select the option to delete your
-    account.</li>
-    <li><strong>Outside the App:</strong> Email <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>
-    from the address associated with your account, with the subject "Delete my F8R account," and we will delete
-    your account and data.</li>
-  </ul>
-  <p>When your account is deleted, we permanently delete your associated personal data — we do not just freeze or
-  deactivate your account — subject to the limited retention exceptions described in
-  <a href="#retention">Data Retention</a> above.</p>
+<h2 id="security">9. Security</h2>
+<p>All traffic between the app and our server is encrypted in transit (HTTPS/TLS). Passwords are
+stored as salted Argon2 hashes. Access to the server's tables is restricted to our server function and
+to us; the app itself can only reach the function, and the function only ever answers the signed-in
+user about their own data. Our provider holds a SOC 2 Type II attestation. No system is perfectly
+secure, and we will inform you and the supervisory authority as the GDPR requires should a breach
+affect your data.</p>
 
-  <h2 id="children">10. Children's Privacy</h2>
-  <p>F8R is intended for users aged 13 and older and is not directed at children under 13. We do not knowingly
-  collect personal information from children under 13. If you are a parent or guardian and believe your child
-  under 13 has provided us with personal information, please contact us at
-  <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a> and we will promptly delete it.</p>
+<h2 id="rights">10. Your rights</h2>
+<p>Under the GDPR you have the right to access your data (Art. 15), to have it rectified (Art. 16),
+erased (Art. 17) or its processing restricted (Art. 18), to receive it in a portable format (Art. 20),
+and to object to processing that rests on our legitimate interests (Art. 21). We make no automated
+decisions about you. To exercise a right, email
+<a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>; for a registered account, write from
+the account's address so we can match the request to you. Erasure you can do yourself at any time in
+the game, see above.</p>
+<p>You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR), in
+particular in the EU member state of your residence. A list of the German supervisory authorities is
+published by the Federal Commissioner for Data Protection at
+<a href="https://www.bfdi.bund.de/EN/Service/Anschriften/Laender/Laender-node.html">bfdi.bund.de</a>.</p>
+<p>Your consent is not the basis of any processing described here, so there is nothing to withdraw;
+if we ever ask for consent (for example for advertising), you will be able to withdraw it in the game
+at any time.</p>
 
-  <h2 id="international">11. International Users</h2>
-  <p>F8R may be used by people around the world, and our service providers may process data in countries other
-  than your own, including the United States. Where required by applicable law, we take steps to ensure
-  appropriate safeguards are in place for such transfers.</p>
+<h2 id="children">11. Children</h2>
+<p>F8r is not directed at children under 13 and we do not knowingly process their data; the age
+confirmation at first start is there to keep them out. Should we learn that a child under 13 is
+playing, we delete the account and everything under it. Parents or guardians who believe this has
+happened can write to <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>.</p>
 
-  <h2 id="changes">12. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time, for example as F8R adds new features (such as in-app
-  purchases). We will update the "Last Updated" date above when we do, and, where changes are significant, we
-  will provide additional notice in the App.</p>
+<h2 id="changes">12. Changes to this policy</h2>
+<p>We update this policy when the game changes what it does with data, for example before adding
+advertising or crash reporting. The date at the top shows the current version; a material change is
+announced in the game before it takes effect. The full history of this text is kept in the game's
+source repository.</p>
 
-  <h2 id="contact">13. Contact Us</h2>
-  <p>If you have questions about this Privacy Policy or how F8R handles your data, contact:</p>
-  <p>
-    <strong>Wavori (Walid)</strong><br>
-    Email: <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>
-  </p>
+<h2 id="contact">13. Contact</h2>
+<p>Wavori (Walid) &middot; tbd &middot;
+<a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a></p>
 
-</div>
+<footer>
+<p>Sources for what our provider records: Appwrite documentation on the
+<a href="https://appwrite.io/docs/references/cloud/models/session">session model</a>,
+<a href="https://appwrite.io/docs/references/cloud/models/user">user model</a>,
+<a href="https://appwrite.io/docs/products/functions/executions">function executions</a>,
+<a href="https://appwrite.io/docs/advanced/security/audit-logs">audit logs</a>,
+<a href="https://appwrite.io/docs/products/network/regions">regions</a> and
+<a href="https://appwrite.io/docs/advanced/security/gdpr">GDPR</a>.</p>
+</footer>
+</main>
 </body>
 </html>

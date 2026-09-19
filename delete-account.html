@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F8r - Delete your account</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c1c1c; background: #fafafa; margin: 0; padding: 24px 16px; line-height: 1.55; }
+  main { max-width: 760px; margin: 0 auto; background: #fff; padding: 32px 28px; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; }
+  h2 { font-size: 1.25rem; margin: 28px 0 8px; border-bottom: 1px solid #e6e6e6; padding-bottom: 4px; }
+  .meta { color: #666; font-size: .9rem; margin-bottom: 20px; }
+  ol li, ul li { margin: 6px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 10px 0 16px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border: 1px solid #e0e0e0; }
+  th { background: #f3f3f3; }
+  .box { background: #eef6ff; border-left: 4px solid #2f7de1; padding: 10px 14px; margin: 14px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>Delete your F8r account</h1>
+<p class="meta">F8r &middot; Last updated: September 19, 2026</p>
+
+<p>This page explains how to delete your F8r account, or your guest's data, and what happens to your
+data afterwards. It applies to the Android app <strong>F8r</strong> (package <code>life.f8r.game</code>)
+published on Google Play by <strong>Wavori</strong>.</p>
+
+<div class="box">
+<strong>Two kinds of players.</strong> F8r creates a <em>guest</em> for you on our server the first
+time you play; a guest has no name and no email address. If you chose <em>Create account</em> on the
+account screen, that guest became a <em>registered account</em> with your email address. Both can be
+deleted the same way inside the game.
+</div>
+
+<h2>Delete inside the game (guest and registered account)</h2>
+<ol>
+  <li>Open F8r and go to the main menu.</li>
+  <li>Tap <strong>Account</strong>.</li>
+  <li>Tap <strong>Delete my data</strong> if you play as a guest, or <strong>Delete account</strong>
+      if you are signed in with an email address. The button is at the bottom of the screen, in red.</li>
+  <li>Read the warning and tap <strong>Delete</strong>. Tap <strong>Keep</strong> to change your mind;
+      nothing is sent until you tap Delete.</li>
+  <li>The screen confirms with &ldquo;Deleted. Nothing of yours is left on the server, and you are a
+      fresh guest on this device.&rdquo; You can keep playing as a new guest or uninstall the app.</li>
+</ol>
+<p>Deletion needs an internet connection; if the server cannot be reached the screen says so and
+nothing is deleted. Try again later.</p>
+
+<h2>Delete by email (registered account only)</h2>
+<p>If you no longer have the app installed, send an email <strong>from the address of your
+account</strong> to <a href="mailto:devaseyori@gmail.com?subject=Delete%20my%20F8r%20account">devaseyori@gmail.com</a>
+with the subject <em>Delete my F8r account</em>. We delete the account within 30 days and confirm by
+reply. We need the email to come from the account's address so that nobody else can delete your
+account.</p>
+<p>A <strong>guest</strong> cannot be deleted by email, because nothing except the app on your device
+identifies a guest to us. Delete a guest from inside the game before uninstalling. A guest that has not
+opened the game for one year is removed automatically, together with everything stored under it.</p>
+
+<h2>What is deleted</h2>
+<p>Deleting removes, at once and for good, everything stored under your user ID on our server:</p>
+<ul>
+  <li>your current run (team, shop, gold, hearts, trophies, round);</li>
+  <li>your last fights (up to 20);</li>
+  <li>any divergence reports the app sent for your runs;</li>
+  <li>the account itself: your user ID, the email address and password hash of a registered account,
+      and all sessions, so every device is signed out.</li>
+</ul>
+<p>The game on your device then continues as a fresh guest with nothing in it. Deleting cannot be
+undone; there is no grace period during which the account could be restored.</p>
+
+<h2>What is kept, and for how long</h2>
+<table>
+<tr><th>Data</th><th>After deletion</th></tr>
+<tr><td>Account, run, fights, divergence reports</td><td>Gone immediately.</td></tr>
+<tr><td>Technical logs at our backend provider (request path, time, status, IP address of account
+events)</td><td>Expire on their own, no later than 7 days after they were written. They are not tied to
+your account any more once it is gone.</td></tr>
+<tr><td>Backups at our backend provider</td><td>Daily database backups, where enabled, are kept for
+7 days; a deleted row can survive in one for up to 7 days and is never restored for an individual
+account.</td></tr>
+<tr><td>Your email to us</td><td>Kept only as long as needed to handle the request, then deleted.</td></tr>
+<tr><td>Settings and the age confirmation on your phone</td><td>Stay on your device until you uninstall
+the app; they are never sent to us.</td></tr>
+</table>
+
+<p>Details are in the <a href="privacy-policy.html">F8r Privacy Policy</a>. Questions:
+<a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>.</p>
+</main>
+</body>
+</html>
