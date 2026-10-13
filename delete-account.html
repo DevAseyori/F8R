@@ -20,7 +20,7 @@
 <body>
 <main>
 <h1>Delete your F8r account</h1>
-<p class="meta">F8r &middot; Last updated: September 19, 2026</p>
+<p class="meta">F8r &middot; Last updated: October 6, 2026</p>
 
 <p>This page explains how to delete your F8r account, or your guest's data, and what happens to your
 data afterwards. It applies to the Android app <strong>F8r</strong> (package <code>life.f8r.game</code>)
@@ -62,7 +62,10 @@ opened the game for one year is removed automatically, together with everything 
 <ul>
   <li>your current run (team, shop, gold, hearts, trophies, round);</li>
   <li>your last fights (up to 20);</li>
+  <li>your record: how many runs you finished and the most trophies one of them won;</li>
+  <li>the teams you sent into fights, which other players may have met as their opponent;</li>
   <li>any divergence reports the app sent for your runs;</li>
+  <li>the feedback you sent from the game, with the email address you gave in it;</li>
   <li>the account itself: your user ID, the email address and password hash of a registered account,
       and all sessions, so every device is signed out.</li>
 </ul>
@@ -72,15 +75,29 @@ undone; there is no grace period during which the account could be restored.</p>
 <h2>What is kept, and for how long</h2>
 <table>
 <tr><th>Data</th><th>After deletion</th></tr>
-<tr><td>Account, run, fights, divergence reports</td><td>Gone immediately.</td></tr>
+<tr><td>Account, run, fights, record, teams sent into fights, divergence reports, feedback</td><td>Gone
+immediately.</td></tr>
 <tr><td>Technical logs at our backend provider (request path, time, status, IP address of account
 events)</td><td>Expire on their own, no later than 7 days after they were written. They are not tied to
 your account any more once it is gone.</td></tr>
 <tr><td>Backups at our backend provider</td><td>Daily database backups, where enabled, are kept for
 7 days; a deleted row can survive in one for up to 7 days and is never restored for an individual
 account.</td></tr>
+<tr><td>Error reports the app sent to Sentry when something went wrong</td><td>Expire on their own,
+30 days after they were sent; deleting the account does not delete them. You can switch them off in
+the game's settings; see the privacy policy, section 3.5.</td></tr>
 <tr><td>Your email to us</td><td>Kept only as long as needed to handle the request, then deleted.</td></tr>
-<tr><td>Settings and the age confirmation on your phone</td><td>Stay on your device until you uninstall
+<tr><td>The Firebase installation ID of the app, which it uses to ask whether its version may still
+be played, whether the game is down or closed for maintenance and whether there is news for the main
+menu</td><td>Stays on your phone until you uninstall the app. It is not tied to your account, so
+deleting the account does not touch it; see the privacy policy, section 3.9.</td></tr>
+<tr><td>The data of ad requests that Google's ad library sent to Google AdMob, and your choice about
+ads in the consent form</td><td>We never hold it, so there is nothing of it for us to delete: Google keeps
+the data of ad requests under its own policies and answers requests about it as its controller. Your
+choice stays on your phone until you change it (Settings, Privacy options) or uninstall the app; see the
+privacy policy, section 3.10.</td></tr>
+<tr><td>Settings (the language you chose included), the age confirmation and the count of fights the
+ads are spaced by, on your phone</td><td>Stay on your device until you uninstall
 the app; they are never sent to us.</td></tr>
 </table>
 
