@@ -24,17 +24,27 @@
 <body>
 <main>
 <h1>Privacy Policy</h1>
-<p class="meta">F8r &middot; September 19, 2026 &middot; Last updated: September 19, 2026</p>
+<p class="meta">F8r &middot; September 19, 2026 &middot; Last updated: October 13, 2026</p>
 
 <p>This Privacy Policy explains what F8r (&ldquo;F8r&rdquo;, &ldquo;the game&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;)
 does with your data. F8r is an auto battler for Android in which you build a team of martial artists and
 watch it fight. The game is offered by the controller named under <a href="#controller">Controller</a>.</p>
 
-<p>The short version: when you first open F8r we ask you to confirm that you are 13 or older; after that
+<p>The short version: when you first open F8r we ask you to confirm that you are 16 or older; after that
 the game creates a guest account for you on our server, which is how your run is saved. You can turn that
 guest into an account with an email address and password, and you can delete the guest or the account,
-with everything stored under it, from inside the game. We show no ads, run no analytics and use no crash
-reporting. We do not sell data.</p>
+with everything stored under it, from inside the game. If you send us feedback from the game, we keep
+what you wrote, and an email address only if you give one so we can answer (see
+<a href="#feedback">3.6</a>). Now and then, between a fight and the shop, the game shows a full-screen ad
+through Google AdMob, and every second round the shop offers a free roll for an ad video you may choose to
+watch; where the law requires it, the game asks for your consent first, and you can change your
+choice in its settings at any time (see <a href="#ads">3.10</a>). We run no analytics. When something breaks, the game
+sends an error report to Sentry so we can fix it, which you can switch off in its settings (see
+<a href="#errors">3.5</a>). The game asks Google Firebase, from its first
+start, whether this version may still be played, whether the game is down or closed for maintenance and
+whether there is news to show on the main menu; it tells Firebase nothing
+about you or your runs (see
+<a href="#appstatus">3.9</a>). We do not sell data.</p>
 
 <nav>
 <ol>
@@ -42,7 +52,7 @@ reporting. We do not sell data.</p>
   <li><a href="#age">Age requirement</a></li>
   <li><a href="#data">What data we process, and why</a></li>
   <li><a href="#device">Data that stays on your device</a></li>
-  <li><a href="#processor">Where the data is stored (Appwrite Cloud)</a></li>
+  <li><a href="#processor">Where the data is stored (Appwrite Cloud, Sentry, Google Firebase, Google AdMob)</a></li>
   <li><a href="#sharing">Sharing</a></li>
   <li><a href="#retention">How long we keep data</a></li>
   <li><a href="#deletion">Deleting your account and data</a></li>
@@ -65,10 +75,12 @@ reporting. We do not sell data.</p>
 policy and requests concerning your data go to the address above.</p>
 
 <h2 id="age">2. Age requirement</h2>
-<p>F8r is for players aged 13 and older. The first time you open the game, before anything is sent
-to our server, we ask you to confirm that you are at least 13. Only your confirmation is stored, and
-only on your device; we do not store your age and we do not verify what you tell us. Without the
-confirmation the game does not continue and no account is created.</p>
+<p>F8r is for players aged 16 and older: from 16 on you can give the consent to advertising that
+<a href="#ads">3.10</a> asks for yourself (Art. 8 GDPR). The first time you open the game, before
+anything is sent to our server and before anything about ads is asked, we ask you to confirm that you
+are at least 16. Only your confirmation is stored, and only on your device; we do not store your age and
+we do not verify what you tell us. Without the confirmation the game does not continue and no account
+is created. Players who confirmed 13 under an earlier version of the game are asked once more.</p>
 
 <h2 id="data">3. What data we process, and why</h2>
 
@@ -98,24 +110,37 @@ no newsletters and no notifications. Email verification and password recovery ar
 moment; if you lose the password, you can only delete the account and start over.</p>
 <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of a contract).</p>
 
-<h3>3.3 Game data</h3>
+<h3 id="gamedata">3.3 Game data</h3>
 <p>Everything you do in the game is stored under your user ID on our server, because the server, not
 the phone, decides the outcome of every fight. This is:</p>
 <table>
 <tr><th>Data</th><th>What it contains</th></tr>
-<tr><td>Your run</td><td>Round, gold, hearts, trophies, the team, the shop shelf, the chosen sets and
+<tr><td>Your run</td><td>Round, gold, hearts, trophies, the fights lost in a row, the team, the shop
+shelf and whether the round's free roll was taken (see <a href="#ads">3.10</a>), the chosen sets and
 backdrop, internal seeds and version counters, and when it was last updated.</td></tr>
-<tr><td>Your last fights</td><td>Both teams as they entered the fight, the opponent (a generated
-team, never another player's data), the seed, the outcome, hearts lost, trophies gained, and the time.
-Only the 20 newest fights are kept.</td></tr>
+<tr><td>Your last fights</td><td>Both teams as they entered the fight (the opponent being another
+player's team as described in the next row, or a team shopped by the game's own bot), the seed, the
+fights lost in a row at that point, the outcome, hearts lost, trophies gained, and the time. Only the
+20 newest fights are kept.</td></tr>
+<tr><td>Your record</td><td>How many runs you have finished, the most trophies one of them won, and
+which of your runs that was (its run ID) and which run was counted last, so the end of a run can tell
+you whether it beat the ones before. Counted by the server when a fight ends a run; no name, and
+nothing another player can see.</td></tr>
+<tr><td>The teams you send into a fight</td><td>Each time you press Fight with at least one fighter on
+your team, your team as it stands at that moment (fighters, levels, items), the backdrop, the round, the chosen set, your trophies at that
+moment and the content version are kept, so that other players in the same round and set can meet
+that team as their opponent. The row carries no name and nothing that identifies you to them: another
+player sees a line of fighters and a backdrop, never who fielded it. The 200 newest teams per set and
+round are kept.</td></tr>
 <tr><td>Divergence reports</td><td>If the game on your phone and the server disagree about the result
 of your shop actions, the app sends the actions and both results to us so we can find the bug. The
 report holds the run ID, version counters, the actions, and the fields that differ. It contains no text
 you wrote and nothing about your device.</td></tr>
 </table>
-<p>There are no leaderboards, no matchmaking against other players, no chat and no usernames. Nothing
-of yours is shown to other players.</p>
-<p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR for the run and the fights; Art. 6(1)(f) GDPR for
+<p>There are no leaderboards, no live matches against other players, no chat and no usernames. The
+only thing of yours another player ever sees is a team you sent into a fight, without your name or
+any other identifier.</p>
+<p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR for the run, the fights, your record and the teams; Art. 6(1)(f) GDPR for
 the divergence reports (our legitimate interest in a game that plays the same on the phone and on the
 server).</p>
 
@@ -128,54 +153,243 @@ from it and the time. We read these logs only to find and fix errors and to inve
 <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (our legitimate interest in a service that works and
 is not abused).</p>
 
-<h3>3.5 What we do not collect</h3>
-<p>F8r shows no advertising, contains no analytics or tracking SDK, sends no crash reports, uses no
-push notifications, and asks for no permissions beyond network access. We do not collect your
-location, contacts, photos, camera, microphone, health or payment data. There are no in-app purchases.
-Should any of this change, this policy and the Data safety section on Google Play will be updated
-before the change ships.</p>
+<h3 id="errors">3.5 Error reports</h3>
+<p>When something goes wrong, the game sends an <strong>error report</strong> to
+<a href="#processor">Sentry</a>, from its first start on, so before the age confirmation too. While
+nothing goes wrong, nothing is sent. A report is one of these:</p>
+<ul>
+  <li>a crash of the app or an error the game did not expect: the error message and the place in the
+      code where it happened (the stack trace);</li>
+  <li>an error our server answered a request with (which route, which error code, and the stack
+      trace);</li>
+  <li>a step of the start that failed (which step, and the error);</li>
+  <li>a divergence report as described in <a href="#data">3.3</a>.</li>
+</ul>
+<p>Each report also holds:</p>
+<ul>
+  <li>short lines about what the game was doing before it: that the connection to our server was lost
+      or came back, that the server refused a request (which route, which error code), that a guest
+      or an account signed in (only its kind, never the address), that an ad or the consent form of
+      <a href="#ads">3.10</a> could not be loaded or shown (with the error code the ad library gave).
+      These lines are kept on your phone and travel only with the next report, never on their own;</li>
+  <li>your user id on our server (the random id of your guest or account, see 3.1), once one exists,
+      so we can find the fights and divergences a report is about; before that, a random identifier
+      Sentry's library creates for this installation of the app;</li>
+  <li>what Sentry's library records about the device by itself: make and model, operating system and
+      its version, whether the phone is rooted or jailbroken, the screen's size, the memory, the free
+      storage and the battery level, the device's language and time zone, and the app's version and
+      the libraries it is built with.</li>
+</ul>
+<p>A report never holds your email address, your password, anything you typed, your screen or what
+you tapped; the game does not count your sessions, measure how you play or record the screen. The
+game does not put your IP address into a report, and we have set Sentry not to store the address a
+report arrives from. Of what the game and our server send each other a report holds only the route
+and error code of a refused request and the divergence report named above. Until a report is sent,
+the game keeps it in its private storage on your phone (at most 30 reports), so a report written
+without a connection is sent at a later start.</p>
+<p><strong>Switching them off:</strong> open <em>Settings</em> and switch <em>Reports on</em> to
+<em>Reports off</em> under <em>Server</em>. From that moment the game sends nothing more to Sentry (a
+report already recorded on your phone may still be sent), and from the next start Sentry's library is
+not started at all. Uninstalling the app ends all reports at once.</p>
+<p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (our legitimate interest in finding and fixing
+errors that break the game for its players). You can object at any time (Art. 21 GDPR) with the
+switch above or by writing to us.</p>
 
-<h3>3.6 Google Play</h3>
+<h3 id="feedback">3.6 Feedback you send us</h3>
+<p>From the menu, from the menu in the shop and from the rating prompt (see <a href="#play">3.8</a>),
+you can send us feedback: one to five stars, a comment if you like, and an email address only if you
+want an answer. Nothing is sent until you press
+<em>Send</em>. With what you wrote, the game sends where you are in it: the round, the fighter set and
+the difficulty of the run on screen, whether you play on Android or iOS, and the content version of
+the app. Our server stores all of this in our database (<a href="#processor">Appwrite, Frankfurt</a>)
+together with your user id (see 3.1) and the time.</p>
+<p>We read feedback to improve the game, and we use an address only to answer the message it came with,
+never for anything else. Please put nothing in the comment about yourself or others that the feedback
+does not need. A player can send at most five messages a day.</p>
+<p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (our legitimate interest in hearing from players and
+improving the game, and in answering you where you ask us to). Sending feedback is voluntary.</p>
+
+<h3>3.7 What we do not collect</h3>
+<p>F8r contains no analytics library (the error reports of <a href="#errors">3.5</a> are about errors,
+not about how you play) and no advertising library but Google's, described in <a href="#ads">3.10</a>.
+It uses no push notifications and asks you for no permission. Besides network access (which includes
+seeing whether the phone has a network at all, so that a server that does not answer is not called a
+lost connection; that is read on the phone and sent nowhere), the app declares only what Google's ad
+library brings with it: access to the advertising ID and to Android's ad services (see
+<a href="#ads">3.10</a>). We do not collect your location, contacts, photos, camera, microphone, health
+or payment data. There are no in-app purchases. Should any of this change, this policy and the Data
+safety section on Google Play will be updated before the change ships.</p>
+
+<h3 id="play">3.8 Google Play</h3>
 <p>You install F8r through Google Play. What Google collects when you do so (for example your Google
 account, device information and installation statistics) is governed by
 <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>; we receive only aggregate,
 anonymous statistics from the Play Console.</p>
+<p>Now and then, back in the shop after a won fight, the game asks whether you would rate it: from your
+sixth fight on, at most once a day, not for 30 days after you sent us feedback, never again once you went
+to rate, and not at all after you answered <em>Later</em> three times. <em>Rate F8r</em> opens the game's
+page on Google Play; the game itself sends nothing when you press it. A rating or review you leave there
+is published by Google under your Google account and governed by Google's terms; we see it in the Play
+Console and may answer it there.</p>
+
+<h3 id="appstatus">3.9 Notices about the app itself (Google Firebase)</h3>
+<p>F8r asks <a href="#processor">Google Firebase</a> (its Remote Config service) whether there is
+something every player has to be told about the app itself; today that is whether this version may
+still be played or has to be updated from the store first, whether the game, or a part of it such
+as the fights or the accounts, is down for the moment or closed for planned maintenance (and until when),
+and whether there is a short note to show on the main menu (news, a notice about a problem, an event). The app asks when it starts, from its very first
+start on (so before the age confirmation too: a version that may no longer be played must not be
+playable at all), again when you come back to it, and while it runs it stays connected to Firebase so
+such a notice reaches it within a few minutes.</p>
+<p>A request holds: a random identifier Firebase creates for this installation of the app (the
+Firebase installation ID) and a token for it; the app's Firebase ID, package name, version and build
+number; the version of the operating system; the device's language, region setting and time zone; the
+version of Firebase's library; and the IP address of the connection. It holds nothing about your guest
+or account, your runs or anything you do in the game: the game sends Firebase no user id. What comes
+back is the same for every player of a version, and the game keeps the last answer on your phone. A note
+on the main menu may carry a link; only when you tap it does your browser open that page, and the game
+sends it nothing of its own.</p>
+<p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (our legitimate interest in telling every player at
+once, even while our own server is down, that a version can no longer be played or that the game is
+down for the moment or closed for maintenance, and in not letting an outdated version run against a server it no longer fits). The game uses Firebase for nothing else: no
+Google Analytics, no advertising identifier (the ads of <a href="#ads">3.10</a> do not go through
+Firebase), no crash reports (those go to Sentry, see <a href="#errors">3.5</a>).</p>
+
+<h3 id="ads">3.10 Advertising (Google AdMob)</h3>
+<p>F8r is free, and ads pay for its servers. Now and then, when a fight's tally has ended and before the
+shop opens, the game shows a <strong>full-screen ad</strong> that you close to go on. It comes only
+every few fights and not in your first fights on this install, never at the end of a run, never when the
+game starts or when you leave it, and never during a fight. In every second round from the third, the
+shop also offers a <strong>free roll for an ad video</strong>: the video plays only if you press that
+button, and the roll is yours once it has played to the end. Rolling for gold stays open beside it, so
+you never have to watch one. Whether the round's free roll was taken is kept with your run on our server
+(see <a href="#gamedata">3.3</a>), so it is taken once; nothing about the video itself is. The ads come from
+<strong>Google AdMob</strong>, Google's ad network, through Google's ad library in the app.</p>
+<p><strong>Your consent.</strong> In the EEA, the UK and Switzerland, the game shows Google's consent form
+once you are on the main menu, the first time and whenever your choice has to be asked again. The form
+says what the ads may use and names the ad partners; you can agree, refuse, or choose purpose by purpose.
+Your choice is kept on your phone by Google's consent library (as a consent string under the IAB's
+Transparency and Consent Framework) and sent along with each ad request. You can change or withdraw it
+at any time: <em>Settings</em>, <em>Privacy options</em> under the title, which opens the form again
+(the button is there wherever the form is required). What happens with each choice:</p>
+<ul>
+  <li><strong>With your consent</strong> the ads may use the identifiers on your phone (the advertising
+      ID, the app set ID) and, if you agreed to it, be personalised to your interests;</li>
+  <li><strong>without it</strong> Google serves only &ldquo;limited ads&rdquo;: ads chosen without
+      personalisation and without identifiers stored on your phone, or no ad at all. The game plays the
+      same either way.</li>
+</ul>
+<p><strong>What Google's ad library sends.</strong> To fetch, show and count an ad, the library sends
+Google, over an encrypted connection: the IP address of the connection (from which an approximate location
+is derived); the identifiers above where your choice allows them; information about the device and the
+app (model, operating system and its version, language, the app's package name and version); what
+happens with the ad (that it was shown, closed or tapped, and whether a video was watched to the end);
+and diagnostic information about the library. Google uses this to deliver and measure ads, to fight fraud and, with your consent, to
+personalise ads. <strong>The game itself gives Google nothing of its own</strong>: not your user id, not
+your runs, fights, team or anything you do in the game, not your email address. We see only aggregate
+figures in the AdMob console (how many ads were shown and what they earned).</p>
+<p>The ads are restricted to content suitable for teenagers (Google's rating &ldquo;T&rdquo;), and
+categories such as gambling, dating and alcohol are blocked in our AdMob account.</p>
+<p><strong>Legal basis:</strong> where the consent form is required, the use of identifiers on your
+phone and personalised ads rest on your consent (Art. 6(1)(a) GDPR, &sect; 25(1) TDDDG), which you can
+withdraw at any time with effect for the future; limited ads, and the IP address and device information
+any ad needs to reach your phone, rest on our legitimate interest in paying for the game with ads
+instead of a price (Art. 6(1)(f) GDPR, &sect; 25(2) No. 2 TDDDG). Google decides itself how it uses the
+data of ad requests, as an independent controller under the Google Ads Controller-Controller Data
+Protection Terms; see <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and
+<a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps
+that use its services</a>. You can also reset or delete the advertising ID in your phone's settings
+(on Android: Settings, Privacy, Ads), which stops it being used for any app.</p>
 
 <h2 id="device">4. Data that stays on your device</h2>
 <p>The app keeps the following on your phone only, in its private storage, and never sends it to us:
-your settings (volume, haptics, language, reduced motion), your age confirmation, a copy of your
-current run and your last fights so the game can show them while the server is unreachable, and the
-session token that signs your guest or account in. Uninstalling the app removes all of it. Uninstalling
+your settings (volume, haptics, reduced motion, whether the shop gives tips and whether error reports
+may be sent, and the language you chose on the settings screen; without a choice the game reads your
+phone's language on the phone to pick its own and stores nothing), which of the shop's tips you have already been given, your age
+confirmation (the age you confirmed being at least, 16), how many fights you have fought on this install and how you last answered
+the rating prompt (see <a href="#play">3.8</a>), the same count for the ads and when the last ad was
+shown (see <a href="#ads">3.10</a>), which notes on the main menu you closed (see
+<a href="#appstatus">3.9</a>), a copy of your
+current run and your last fights so the game can show them while the server is unreachable (a version
+of the game built without a server keeps your record of finished runs here too, as described in
+<a href="#data">3.3</a>), the
+session token that signs your guest or account in, and the Firebase installation ID and the
+last answer about the app (see <a href="#appstatus">3.9</a>). Google's consent library keeps your choice
+about ads on the phone too, and sends it with every ad request rather than to us (see
+<a href="#ads">3.10</a>). Uninstalling the app removes all of it. Uninstalling
 does <em>not</em> delete your account on the server; see <a href="#deletion">Deleting your account</a>.</p>
 
-<h2 id="processor">5. Where the data is stored (Appwrite Cloud)</h2>
+<h2 id="processor">5. Where the data is stored (Appwrite Cloud, Sentry, Google Firebase, Google AdMob)</h2>
 <p>Our backend runs on <strong>Appwrite Cloud</strong>, a service of Appwrite Code Ltd. (<a href="https://appwrite.io/privacy">privacy policy</a>).
 Appwrite processes your data on our behalf as a processor under a data processing agreement
 (Art. 28 GDPR). We use the <strong>Frankfurt (FRA) region</strong>: all data at rest, including
 database rows, sessions, logs and backups, stays in Germany; Appwrite states that regions are
 isolated and data remains within the selected region. Appwrite's own sub-processors are listed in its data processing agreement.</p>
+<p>The error reports (<a href="#errors">3.5</a>) go to <strong>Sentry</strong>, a service of Functional
+Software, Inc., 45 Fremont Street, 8th Floor, San Francisco, CA 94105, USA
+(<a href="https://sentry.io/privacy/">privacy policy</a>), which processes them on our behalf under its
+data processing addendum (Art. 28 GDPR). We use Sentry's <strong>EU region</strong>: the reports are
+stored in Frankfurt, Germany. Sentry may still access them from the USA, for example to support or
+secure the service; Functional Software, Inc. is certified under the EU-U.S. Data Privacy Framework
+(Art. 45 GDPR), and its data processing addendum includes the EU standard contractual clauses
+(Art. 46 GDPR). Feedback (<a href="#feedback">3.6</a>) does not go to Sentry; it is stored by our server
+at Appwrite like the rest of your data.</p>
+<p>The questions about the app itself (<a href="#appstatus">3.9</a>) go to <strong>Google Firebase</strong>
+(Remote Config and Firebase Installations), services of Google Ireland Limited, Gordon House, Barrow
+Street, Dublin 4, Ireland (<a href="https://firebase.google.com/support/privacy">privacy and security in
+Firebase</a>), which processes them on our behalf under the Firebase Data Processing and Security Terms
+(Art. 28 GDPR). Google may also process them in the USA (Google LLC); Google LLC is certified under the
+EU-U.S. Data Privacy Framework (Art. 45 GDPR), and the terms include the EU standard contractual clauses
+(Art. 46 GDPR).</p>
+<p>The ad requests of <a href="#ads">3.10</a> go to <strong>Google AdMob</strong>, a service of Google
+Ireland Limited (the address above). Google is not our processor for them: it processes them as an
+independent controller under the Google Ads Controller-Controller Data Protection Terms, and may do so in
+the USA (Google LLC, certified under the EU-U.S. Data Privacy Framework, Art. 45 GDPR; the terms include
+the EU standard contractual clauses, Art. 46 GDPR). With your consent the ad partners named in the
+consent form receive data of an ad request too, each under its own privacy policy, which the form links
+to.</p>
 
 
 <h2 id="sharing">6. Sharing</h2>
-<p>We share your data with nobody except Appwrite as described above. We disclose data to authorities
-only when a valid legal request obliges us to (Art. 6(1)(c) GDPR). We do not sell personal data and we
-do not use it for advertising. If F8r were ever transferred to another operator, you would be informed
+<p>We share your data with nobody except Appwrite, Sentry and Google Firebase as described above; the
+ad requests of <a href="#ads">3.10</a> go from Google's ad library to Google, and with your consent to
+the ad partners the consent form names. We disclose data to authorities
+only when a valid legal request obliges us to (Art. 6(1)(c) GDPR). We do not sell personal data, and
+nothing we store about you (your account, runs, fights, record or feedback) is used for advertising or
+handed to an ad network. If F8r were ever transferred to another operator, you would be informed
 beforehand.</p>
 
 <h2 id="retention">7. How long we keep data</h2>
 <table>
 <tr><th>Data</th><th>Kept until</th></tr>
-<tr><td>Guest account, registered account, your run</td><td>You delete it in the game (or ask us to).
+<tr><td>Guest account, registered account, your run, your record</td><td>You delete it in the game (or ask us to).
 A guest whose session has expired, that is a guest who has not opened the game for a year, is removed
 with everything stored under it during our regular clean-up.</td></tr>
 <tr><td>Your last fights</td><td>The 20 newest are kept; older ones are deleted by an hourly clean-up,
 and all of them go when the account is deleted.</td></tr>
+<tr><td>The teams you send into a fight</td><td>The 200 newest per set and round are kept; older ones,
+and teams from an older content version, are deleted by the hourly clean-up, and all of yours go when
+the account is deleted.</td></tr>
 <tr><td>Divergence reports</td><td>Deleted when the account is deleted; independently of that, only the
 500 newest reports across all players are kept.</td></tr>
+<tr><td>Feedback you send from the game</td><td>Up to 180 days, then deleted by the hourly clean-up;
+all of yours go at once when the account is deleted. If we answer you by email, that exchange is kept
+like any email you send us.</td></tr>
 <tr><td>Sessions</td><td>A session expires one year after it was last extended, which happens on every
 start of the game. Deleting the account ends all sessions at once.</td></tr>
 <tr><td>Execution and audit logs at Appwrite</td><td>No longer than 7 days (24 hours or less on
 Appwrite's Free plan).</td></tr>
+<tr><td>Error reports at Sentry</td><td>30 days, then Sentry deletes them. Deleting your account in
+the game does not delete reports already sent; they run out by themselves.</td></tr>
+<tr><td>Firebase installation ID and the requests of <a href="#appstatus">3.9</a></td><td>The
+ID stays on your phone until you uninstall the app. Google keeps it and the data of a request as
+described in <a href="https://firebase.google.com/support/privacy">privacy and security in
+Firebase</a>. Neither is tied to your guest or account, so deleting your account does not touch
+them.</td></tr>
+<tr><td>Your choice about ads, and the data of ad requests</td><td>Your choice stays on your phone
+until you change it in the settings or uninstall the app. Google keeps the data of ad requests as
+described in <a href="https://policies.google.com/technologies/retention">how Google retains data</a>;
+it is not tied to your guest or account, so deleting your account does not touch it.</td></tr>
 <tr><td>Backups at Appwrite</td><td>Daily database backups, where enabled, are kept for 7 days, so a
 deleted row can survive in a backup for up to 7 days. Backups are not used to restore individual
 accounts.</td></tr>
@@ -186,7 +400,8 @@ accounts.</td></tr>
 <p>You can delete your guest or your registered account, and with it everything stored under it on
 our server, from inside the game: open the menu, choose <em>Account</em>, then <em>Delete my data</em>
 (as a guest) or <em>Delete account</em> (with an account), and confirm with <em>Delete</em>. The server
-then deletes your run, your fights and your divergence reports, and finally the account itself with its
+then deletes your run, your fights, your record of finished runs, the teams you sent into fights,
+your divergence reports and the feedback you sent, and finally the account itself with its
 email address, password hash and sessions. This happens at once and cannot be undone. The game then
 continues with a fresh, empty guest on your device.</p>
 <p>If you have a registered account and no longer have the app, email us from the address of the
@@ -217,19 +432,21 @@ the game, see above.</p>
 particular in the EU member state of your residence. A list of the German supervisory authorities is
 published by the Federal Commissioner for Data Protection at
 <a href="https://www.bfdi.bund.de/EN/Service/Anschriften/Laender/Laender-node.html">bfdi.bund.de</a>.</p>
-<p>Your consent is not the basis of any processing described here, so there is nothing to withdraw;
-if we ever ask for consent (for example for advertising), you will be able to withdraw it in the game
-at any time.</p>
+<p>Where we ask for your consent (the ads of <a href="#ads">3.10</a>), you can withdraw it at any time,
+with effect for the future, in the game: <em>Settings</em>, <em>Privacy options</em>. Withdrawing it does
+not make what happened before unlawful. Requests about the data Google holds from ad requests go to
+Google, which answers them as their controller (see <a href="https://policies.google.com/privacy">Google's
+Privacy Policy</a>); we hold none of it.</p>
 
 <h2 id="children">11. Children</h2>
-<p>F8r is not directed at children under 13 and we do not knowingly process their data; the age
-confirmation at first start is there to keep them out. Should we learn that a child under 13 is
+<p>F8r is not directed at children or at players under 16, and we do not knowingly process their data;
+the age confirmation at first start is there to keep them out. Should we learn that a player under 16 is
 playing, we delete the account and everything under it. Parents or guardians who believe this has
 happened can write to <a href="mailto:devaseyori@gmail.com">devaseyori@gmail.com</a>.</p>
 
 <h2 id="changes">12. Changes to this policy</h2>
-<p>We update this policy when the game changes what it does with data, for example before adding
-advertising or crash reporting. The date at the top shows the current version; a material change is
+<p>We update this policy when the game changes what it does with data, for example before a new kind of
+ad or a new ad network. The date at the top shows the current version; a material change is
 announced in the game before it takes effect. The full history of this text is kept in the game's
 source repository.</p>
 
@@ -244,7 +461,18 @@ source repository.</p>
 <a href="https://appwrite.io/docs/products/functions/executions">function executions</a>,
 <a href="https://appwrite.io/docs/advanced/security/audit-logs">audit logs</a>,
 <a href="https://appwrite.io/docs/products/network/regions">regions</a> and
-<a href="https://appwrite.io/docs/advanced/security/gdpr">GDPR</a>.</p>
+<a href="https://appwrite.io/docs/advanced/security/gdpr">GDPR</a>. What Sentry records and where:
+<a href="https://docs.sentry.io/platforms/dart/guides/flutter/data-management/data-collected/">data collected by the Flutter SDK</a>,
+its <a href="https://sentry.io/legal/dpa/">data processing addendum</a>,
+<a href="https://sentry.io/changelog/data-storage-location-in-germany-is-generally-available">data storage in Germany</a> and
+<a href="https://www.dataprivacyframework.gov/participant/5869">its Data Privacy Framework certification</a>.
+What a Firebase Remote Config request holds and how long Google keeps it:
+<a href="https://firebase.google.com/support/privacy">privacy and security in Firebase</a> and
+<a href="https://firebase.google.com/docs/projects/manage-installations">Firebase installations</a>.
+What Google's ad library sends and how ads are served with and without consent:
+<a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK data disclosure</a>,
+<a href="https://developers.google.com/admob/flutter/privacy/ad-serving-modes">ad serving modes</a> and
+<a href="https://support.google.com/admob/answer/10105530">limited ads</a>.</p>
 </footer>
 </main>
 </body>
