@@ -24,7 +24,7 @@
 <body>
 <main>
 <h1>Privacy Policy</h1>
-<p class="meta">F8r &middot; September 19, 2026 &middot; Last updated: October 13, 2026</p>
+<p class="meta">F8r &middot; September 19, 2026 &middot; Last updated: October 14, 2026</p>
 
 <p>This Privacy Policy explains what F8r (&ldquo;F8r&rdquo;, &ldquo;the game&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;)
 does with your data. F8r is an auto battler for Android in which you build a team of martial artists and
@@ -32,7 +32,8 @@ watch it fight. The game is offered by the controller named under <a href="#cont
 
 <p>The short version: when you first open F8r we ask you to confirm that you are 16 or older; after that
 the game creates a guest account for you on our server, which is how your run is saved. You can turn that
-guest into an account with an email address and password, and you can delete the guest or the account,
+guest into an account with your email address and a code we mail to it (there is no password), and you
+can delete the guest or the account,
 with everything stored under it, from inside the game. If you send us feedback from the game, we keep
 what you wrote, and an email address only if you give one so we can answer (see
 <a href="#feedback">3.6</a>). Now and then, between a fight and the shop, the game shows a full-screen ad
@@ -99,15 +100,25 @@ later start. A guest has no name and no email address. What exists about a guest
 (Art. 6(1)(b) GDPR, performance of a contract); the session data serves the security of the account
 and of our service (Art. 6(1)(f) GDPR, our legitimate interest in preventing abuse).</p>
 
-<h3>3.2 Your registered account</h3>
-<p>If you choose <em>Create account</em> on the account screen, your guest becomes an account with the
-email address and password you enter. The user ID stays the same, so everything stored under the guest
-becomes the account's. The password is stored only as a salted hash (Argon2); we cannot read it.
-Our provider additionally derives from the address whether it belongs to a free, disposable or
-corporate email service and whether the password appears in known breaches; we do not use these flags.</p>
-<p>We use the email address only to sign you in and to answer a request you send us from it. We send
-no newsletters and no notifications. Email verification and password recovery are not offered at the
-moment; if you lose the password, you can only delete the account and start over.</p>
+<h3 id="account">3.2 Your registered account</h3>
+<p>F8r has no passwords. If you choose <em>Continue with email</em> on the account screen and enter your
+email address, our server puts the address on your guest, and our backend provider sends a six-digit
+sign-in code to it (from <em>noreply@appwrite.io</em>, in the language the game speaks). The code is
+valid for 15 minutes. When you enter it, your guest becomes an account with that address, and the
+address counts as confirmed. The user ID stays the same, so everything stored under the guest becomes
+the account's. If the address already belongs to an account, the code signs you in to that account
+instead, and the guest on this device is left behind; the game says so before it sends the code,
+whenever the guest has a run or a record to lose.</p>
+<p>An address you entered but never confirmed with a code stays on your guest. So that nobody can keep
+an address that is not theirs, our server takes such an address off a guest when somebody else enters
+it an hour or more later (it is replaced by a placeholder that reaches nobody), and ends the guest's
+sessions when somebody else enters it within the hour. Our provider additionally derives from an
+address whether it belongs to a free, disposable or corporate email service; we do not use these
+flags. An account created with a password by an earlier version of the game keeps that password's
+salted hash (Argon2) until the account is deleted; we cannot read it, and the game no longer signs in
+with it.</p>
+<p>We use the email address only to send you sign-in codes and to answer a request you send us from
+it. We send no newsletters and no notifications.</p>
 <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of a contract).</p>
 
 <h3 id="gamedata">3.3 Game data</h3>
@@ -124,8 +135,9 @@ fights lost in a row at that point, the outcome, hearts lost, trophies gained, a
 20 newest fights are kept.</td></tr>
 <tr><td>Your record</td><td>How many runs you have finished, the most trophies one of them won, and
 which of your runs that was (its run ID) and which run was counted last, so the end of a run can tell
-you whether it beat the ones before. Counted by the server when a fight ends a run; no name, and
-nothing another player can see.</td></tr>
+you whether it beat the ones before; and the fighter sets a run was won on, so the game knows which
+sets you have unlocked. Counted by the server when a fight ends a run; no name, and nothing another
+player can see.</td></tr>
 <tr><td>The teams you send into a fight</td><td>Each time you press Fight with at least one fighter on
 your team, your team as it stands at that moment (fighters, levels, items), the backdrop, the round, the chosen set, your trophies at that
 moment and the content version are kept, so that other players in the same round and set can meet
@@ -180,7 +192,7 @@ nothing goes wrong, nothing is sent. A report is one of these:</p>
       storage and the battery level, the device's language and time zone, and the app's version and
       the libraries it is built with.</li>
 </ul>
-<p>A report never holds your email address, your password, anything you typed, your screen or what
+<p>A report never holds your email address, a sign-in code, anything you typed, your screen or what
 you tapped; the game does not count your sessions, measure how you play or record the screen. The
 game does not put your IP address into a report, and we have set Sentry not to store the address a
 report arrives from. Of what the game and our server send each other a report holds only the route
@@ -324,7 +336,8 @@ does <em>not</em> delete your account on the server; see <a href="#deletion">Del
 Appwrite processes your data on our behalf as a processor under a data processing agreement
 (Art. 28 GDPR). We use the <strong>Frankfurt (FRA) region</strong>: all data at rest, including
 database rows, sessions, logs and backups, stays in Germany; Appwrite states that regions are
-isolated and data remains within the selected region. Appwrite's own sub-processors are listed in its data processing agreement.</p>
+isolated and data remains within the selected region. The sign-in codes (<a href="#account">3.2</a>) are mailed by
+Appwrite's own mail service on our behalf. Appwrite's own sub-processors are listed in its data processing agreement.</p>
 <p>The error reports (<a href="#errors">3.5</a>) go to <strong>Sentry</strong>, a service of Functional
 Software, Inc., 45 Fremont Street, 8th Floor, San Francisco, CA 94105, USA
 (<a href="https://sentry.io/privacy/">privacy policy</a>), which processes them on our behalf under its
@@ -375,6 +388,10 @@ the account is deleted.</td></tr>
 <tr><td>Feedback you send from the game</td><td>Up to 180 days, then deleted by the hourly clean-up;
 all of yours go at once when the account is deleted. If we answer you by email, that exchange is kept
 like any email you send us.</td></tr>
+<tr><td>A sign-in code</td><td>Valid for 15 minutes, or until it is used.</td></tr>
+<tr><td>An email address entered but never confirmed</td><td>Stays on the guest until the guest is
+deleted, or until somebody else enters the same address an hour or more later, when it is replaced by a
+placeholder that reaches nobody.</td></tr>
 <tr><td>Sessions</td><td>A session expires one year after it was last extended, which happens on every
 start of the game. Deleting the account ends all sessions at once.</td></tr>
 <tr><td>Execution and audit logs at Appwrite</td><td>No longer than 7 days (24 hours or less on
